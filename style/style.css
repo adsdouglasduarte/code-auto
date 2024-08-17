@@ -1,0 +1,391 @@
+/* Reset e Configurações Globais */
+/* Remove margens e espaçamentos padrão, e define box-sizing para incluir bordas e padding na largura/altura */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis globais de cores */
+:root {
+    --color-1: #F2E852;  /* Cor principal */
+    --color-2: #D99441;  /* Cor secundária */
+    --color-3: #BF612A;  /* Cor terciária */
+    --color-4: #A64521;  /* Cor de fundo */
+}
+
+/* HTML */
+/* Desativa a rolagem horizontal e suaviza a rolagem */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Corpo */
+/* Define a cor de fundo, fonte padrão e espaçamento entre linhas */
+body {
+    background-color: var(--color-4);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+/* Configura o cabeçalho como flexbox e o torna fixo no topo durante a rolagem */
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 3px 0 3px;
+    background-color: var(--color-4);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;  /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+/* Estiliza o título principal do cabeçalho */
+header h1 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilo do link da home */
+#home-content {
+    text-decoration: none;
+}
+
+/* Menu */
+/* Estiliza a área do menu como um flexbox */
+.content-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estiliza o ícone do menu hamburger */
+.menu-hamburger {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburger span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Estiliza o menu que aparece ao clicar no hamburger */
+#menu {
+    display: none;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-1);
+}
+
+/* Estiliza a lista do menu */
+.content-subMenu ul {
+    padding: 20px 0 0 20px;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* Estiliza os itens da lista do menu */
+.content-subMenu ul li {
+    display: inline;
+}
+
+/* Estiliza os links do menu */
+.content-subMenu ul li a {
+    color: var(--color-4);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Carrossel */
+/* Estiliza o contêiner do carrossel */
+#carousel {
+    margin-top: 50px;
+    border: 5px solid #fff;
+}
+
+/* Define o tamanho das imagens do carrossel */
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* Seções */
+/* Define o espaçamento interno das seções */
+main section {
+    padding: 50px 100px;
+}
+
+/* Seção Sobre */
+/* Estiliza a área 'Sobre' com flexbox */
+.content-sobre {
+    display: flex;
+    align-items: center;
+}
+
+/* Define o tamanho da imagem na seção 'Sobre' */
+.content-sobre img {
+    width: 50%;
+    height: auto;
+    margin-right: 50px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px black;
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.content-sobre img:hover {
+    transform: scale(1.1);
+
+}
+
+/* Estiliza o título da seção 'Sobre' */
+.content-sobre h2 {
+    font-size: 2rem;
+    color: var(--color-1);
+    margin-bottom: 20px;
+}
+
+/* Estiliza o parágrafo da seção 'Sobre' */
+.content-sobre p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Seção Destaque */
+/* Centraliza o texto da seção 'Destaque' */
+.content-destaque {
+    text-align: center;
+}
+
+/* Estiliza o título da seção 'Destaque' */
+.content-destaque h2 {
+    font-size: 2.5rem;
+    color: var(--color-1);
+    margin-bottom: 40px;
+}
+
+/* Define a disposição do texto na seção 'Destaque' */
+.content-destaque-text {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Define o tamanho das imagens na seção 'Destaque' */
+.text-destaque img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-destaque img:hover {
+    transform: scale(1.1);
+}
+
+/* Estiliza os subtítulos na seção 'Destaque' */
+.text-destaque h3 {
+    font-size: 1.8rem;
+    color: var(--color-1);
+    margin-bottom: 10px;
+}
+
+/* Estiliza os parágrafos na seção 'Destaque' */
+.text-destaque p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Estiliza o preço na seção 'Destaque' */
+.text-destaque .preco {
+    color: var(--color-2);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Estiliza o botão 'Tenho Interesse' na seção 'Destaque' */
+.tenho-inter {
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--color-2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estiliza o botão ao passar o mouse */
+.tenho-inter:hover {
+    background-color: var(--color-3);
+}
+
+/* Seção Promoções */
+/* Centraliza o texto da seção 'Promoções' */
+.content-promocoes {
+    text-align: center;
+}
+
+/* Estiliza o título da seção 'Promoções' */
+.content-promocoes h2 {
+    font-size: 2.5rem;
+    color: var(--color-1);
+    margin-bottom: 40px;
+}
+
+/* Define a disposição do texto na seção 'Promoções' */
+.content-promocoes-text {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Define o tamanho das imagens na seção 'Promoções' */
+.text-promocoes img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-promocoes img:hover {
+    transform: scale(1.1);
+}
+
+/* Estiliza os subtítulos na seção 'Promoções' */
+.text-promocoes h3 {
+    font-size: 1.8rem;
+    color: var(--color-1);
+    margin-bottom: 10px;
+}
+
+/* Estiliza os parágrafos na seção 'Promoções' */
+.text-promocoes p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Estiliza o preço na seção 'Promoções' */
+.text-promocoes .preco {
+    color: var(--color-2);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Estiliza o botão 'Tenho Interesse' na seção 'Promoções' */
+.text-promocoes .tenho-inter {
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--color-2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estiliza o botão ao passar o mouse na seção 'Promoções' */
+.text-promocoes .tenho-inter:hover {
+    background-color: var(--color-3);
+}
+
+/* Seção Contato */
+/* Centraliza o texto e define a cor de fundo na seção 'Contato' */
+#contato {
+    text-align: center;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    padding: 50px 0;
+}
+
+/* Estiliza o título da seção 'Contato' */
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Define a disposição dos itens do formulário na seção 'Contato' */
+.content-form {
+    display: grid;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Estiliza os rótulos do formulário */
+.content-form label {
+    font-size: 1.2rem;
+}
+
+/* Estiliza os campos de entrada e a área de texto */
+.content-form input,
+.content-form textarea {
+    padding: 10px;
+    border: 1px solid var(--color-4);
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Define a altura da área de texto */
+.content-form textarea {
+    height: 150px;
+}
+
+/* Estiliza o botão de envio do formulário */
+.content-form button {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--color-4);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estiliza o botão ao passar o mouse */
+.content-form button:hover {
+    background-color: var(--color-2);
+}
+
+/* Rodapé */
+/* Centraliza o texto e define a cor de fundo no rodapé */
+footer {
+    text-align: center;
+    background-color: var(--color-3);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Estiliza a área principal do rodapé */
+.footer-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Estiliza as imagens dos ícones no rodapé */
+.footer-main img {
+    width: 24px;
+    height: auto;
+    margin-left: 5px;
+}
+
+/* Estiliza o link do LinkedIn no rodapé */
+#linkedin {
+    color: var(--color-1);
+    text-decoration: none;
+    font-weight: bold;
+}
